@@ -28,8 +28,8 @@ public class UndertowCompressionIssue {
 	@MethodSource("parameters")
 	public void testJettyClient(Compression compression, int copyBufferSize, int requestAndResponseSize)
 			throws Exception {
-		LOGGER.info("Starting Jetty-client test with copyBufferSize={}, requestAndResponseSize={}", copyBufferSize,
-				requestAndResponseSize);
+		LOGGER.info("Starting Jetty-client test with copyBufferSize={}, requestAndResponseSize={}, compression={}", copyBufferSize,
+				requestAndResponseSize, compression.headerValue());
 		try (UndertowServer server = new UndertowServer(0, new MirrorServlet(copyBufferSize))) {
 			var httpClient = new org.eclipse.jetty.client.HttpClient();
 			var uncompressed = RandomStringUtils.randomAlphanumeric(requestAndResponseSize);
