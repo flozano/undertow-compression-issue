@@ -11,7 +11,7 @@ repositories {
 
 dependencies {
     implementation 'ch.qos.logback:logback-classic:1.5.3'
-    implementation 'io.undertow:undertow-servlet:2.3.12.Final'
+    implementation 'io.undertow:undertow-servlet:2.3.17.Final'
     implementation 'org.eclipse.jetty:jetty-client:12.0.7'
     implementation 'commons-io:commons-io:2.15.1'
     implementation 'org.apache.commons:commons-lang3:3.14.0'
